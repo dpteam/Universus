@@ -6,8 +6,17 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EE08ED8B18100383006605FE /* platform.h in Headers */ = {isa = PBXBuildFile; fileRef = EE08ED8A18100383006605FE /* platform.h */; };
+		EE08ED8D18100413006605FE /* u_timer.h in Headers */ = {isa = PBXBuildFile; fileRef = EE08ED8C18100413006605FE /* u_timer.h */; };
+		EE08ED8F181009AF006605FE /* u_timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE08ED8E181009AF006605FE /* u_timer.cpp */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		EE08ED7F181001EA006605FE /* libUniversus.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libUniversus.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE08ED8A18100383006605FE /* platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform.h; sourceTree = "<group>"; };
+		EE08ED8C18100413006605FE /* u_timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u_timer.h; sourceTree = "<group>"; };
+		EE08ED8E181009AF006605FE /* u_timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = u_timer.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +33,9 @@
 		EE08ED74181001E9006605FE = {
 			isa = PBXGroup;
 			children = (
+				EE08ED8C18100413006605FE /* u_timer.h */,
+				EE08ED8E181009AF006605FE /* u_timer.cpp */,
+				EE08ED8A18100383006605FE /* platform.h */,
 				EE08ED80181001EA006605FE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +55,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE08ED8B18100383006605FE /* platform.h in Headers */,
+				EE08ED8D18100413006605FE /* u_timer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +110,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE08ED8F181009AF006605FE /* u_timer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +165,10 @@
 		EE08ED84181001EA006605FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EXECUTABLE_PREFIX = lib;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -158,7 +176,10 @@
 		EE08ED85181001EA006605FE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EXECUTABLE_PREFIX = lib;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
