@@ -23,7 +23,7 @@ enum TimerState
 class u_timer
 {
 public:
-    u_timer() : u_timerstate(RESET), elapsedTime(0) {}
+    u_timer() : u_timerState(RESET), elapsedTime(0), last(0) {}
     
     void Start();
     void Pause();
@@ -31,10 +31,14 @@ public:
     
     int getTicks();
     
-private:
-    int elapsedTime;
+    bool isRunning(void);
+    bool isPaused(void);
     
-    TimerState u_timerstate;
+private:
+    int elapsedTime, last;
+    int ticks;
+    
+    TimerState u_timerState;
 };
 
 #endif
