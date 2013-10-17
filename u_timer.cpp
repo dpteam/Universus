@@ -28,30 +28,45 @@ bool u_timer::isPaused(void)
     return false;
 }
 
-void u_timer::Pause()
+void u_timer::Pause(void)
 {
-    last = ticks;
-    
-    elapsedTime = 0;
+    last = SDL_GetTicks() - ticks;
     
     u_timerState = PAUSED;
 }
 
-void u_timer::Start()
+void u_timer::Start(void)
 {
     if(u_timerState == PAUSED) 
     {
-        elapsedTime = last;
+        ticks = SDL_GetTicks() - last;
+        
+        last = 0;
         
         u_timerState = RUNNING;
     }
+    
+    ticks = SDL_GetTicks();
 }
 
-void u_timer::Reset()
+// get timer ticks in mseconds
+
+int u_timer::getTicks(void)
+{
+    return ticks;
+}
+
+void u_timer::Reset(void)
 {
     ticks = 0;
     last = 0;
-    elapsedTime = 0;
     
     u_timerState = RESET;
+}
+
+void u_timer::Stop(void)
+{
+    u_timer::Reset();
+    
+    u_timerState = STOPPED;
 }

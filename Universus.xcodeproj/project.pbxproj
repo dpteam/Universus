@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EE08ED8B18100383006605FE /* platform.h in Headers */ = {isa = PBXBuildFile; fileRef = EE08ED8A18100383006605FE /* platform.h */; };
+		EE08ED8B18100383006605FE /* u_platform.h in Headers */ = {isa = PBXBuildFile; fileRef = EE08ED8A18100383006605FE /* u_platform.h */; };
 		EE08ED8D18100413006605FE /* u_timer.h in Headers */ = {isa = PBXBuildFile; fileRef = EE08ED8C18100413006605FE /* u_timer.h */; };
 		EE08ED8F181009AF006605FE /* u_timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE08ED8E181009AF006605FE /* u_timer.cpp */; };
+		EE93607C181087F200B9EFCE /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE93607B181087F200B9EFCE /* SDL2.framework */; };
+		EE9360801810893700B9EFCE /* u_thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE93607F1810893700B9EFCE /* u_thread.cpp */; };
+		EE9360821810895500B9EFCE /* u_thread.h in Headers */ = {isa = PBXBuildFile; fileRef = EE9360811810895500B9EFCE /* u_thread.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EE08ED7F181001EA006605FE /* libUniversus.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libUniversus.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE08ED8A18100383006605FE /* platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform.h; sourceTree = "<group>"; };
+		EE08ED8A18100383006605FE /* u_platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u_platform.h; sourceTree = "<group>"; };
 		EE08ED8C18100413006605FE /* u_timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u_timer.h; sourceTree = "<group>"; };
 		EE08ED8E181009AF006605FE /* u_timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = u_timer.cpp; sourceTree = "<group>"; };
+		EE93607B181087F200B9EFCE /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = Library/Frameworks/SDL2.framework; sourceTree = SDKROOT; };
+		EE93607F1810893700B9EFCE /* u_thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = u_thread.cpp; sourceTree = "<group>"; };
+		EE9360811810895500B9EFCE /* u_thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u_thread.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE93607C181087F200B9EFCE /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,9 +40,12 @@
 		EE08ED74181001E9006605FE = {
 			isa = PBXGroup;
 			children = (
+				EE93607B181087F200B9EFCE /* SDL2.framework */,
 				EE08ED8C18100413006605FE /* u_timer.h */,
+				EE9360811810895500B9EFCE /* u_thread.h */,
+				EE93607F1810893700B9EFCE /* u_thread.cpp */,
 				EE08ED8E181009AF006605FE /* u_timer.cpp */,
-				EE08ED8A18100383006605FE /* platform.h */,
+				EE08ED8A18100383006605FE /* u_platform.h */,
 				EE08ED80181001EA006605FE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,8 +65,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE08ED8B18100383006605FE /* platform.h in Headers */,
+				EE08ED8B18100383006605FE /* u_platform.h in Headers */,
 				EE08ED8D18100413006605FE /* u_timer.h in Headers */,
+				EE9360821810895500B9EFCE /* u_thread.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +122,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE08ED8F181009AF006605FE /* u_timer.cpp in Sources */,
+				EE9360801810893700B9EFCE /* u_thread.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +180,8 @@
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_SSE3_EXTENSIONS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -179,6 +193,8 @@
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_SSE3_EXTENSIONS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -203,6 +219,7 @@
 				EE08ED85181001EA006605FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

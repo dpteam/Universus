@@ -9,9 +9,27 @@
 #ifndef _PLATFORM_H_
 #define _PLATFORM_H_
 
+// OS X platform
+
 #if (defined(__APPLE__) && defined(__MACH__))
 
-#include <ctime>
+#define PLATFORM_OSX
+
+#endif
+
+// Linux platform
+
+#if defined(__linux__)
+
+#define PLATFORM_LINUX
+
+#endif
+
+// Windows platform
+
+#if (defined(_WIN32) || defined(_WIN64))
+
+#define PLATFORM_WIN
 
 #endif
 
