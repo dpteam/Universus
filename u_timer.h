@@ -42,12 +42,6 @@ public:
     // get timer ticks in mseconds
     int getTicks();
     
-    // if timer is running, return BOOL (not u_timerState)
-    bool isRunning(void);
-    
-    // if timer is paused, return BOOL (not u_timerState)
-    bool isPaused(void);
-    
 private:
     int ticks, last;
     

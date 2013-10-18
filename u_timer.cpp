@@ -8,26 +8,6 @@
 
 #include "u_timer.h"
 
-bool u_timer::isRunning(void)
-{
-    if(u_timerState == RUNNING) 
-    {
-        return true;
-    }
-    
-    return false;
-}
-
-bool u_timer::isPaused(void)
-{
-    if(u_timerState == PAUSED) 
-    {
-        return true;
-    }
-    
-    return false;
-}
-
 void u_timer::Pause(void)
 {
     last = SDL_GetTicks() - ticks;
