@@ -10,43 +10,32 @@
 #define _U_TIMER_H_
 
 #include <SDL2/SDL.h>
-#include "u_script.h"
-
 
 // timer?
-
-enum TimerState
-{
-    RUNNING,
-    PAUSED,
-    RESET,
-    STOPPED
-};
 
 class u_timer
 {
 public:
-    u_timer() : u_timerState(RUNNING), ticks(0), last(0) {}
+    u_timer();
     
     // starts the timer
-    void Start(lua_State*);
+    virtual void Start();
     
     // pause the timer
-    void Pause(lua_State*);
-    
-    // resets timer
-    void Reset(lua_State*);
-    
-    // stop timer
-    void Stop(lua_State*);
+    void Pause();
     
     // get timer ticks in mseconds
-    int getTicks(lua_State*);
+    int getTicks();
+    
+    // check if timer is paused
+    bool isPaused();
+    
+    // check if times is started
+    bool isStarted();
     
 private:
     int ticks, last;
-    
-    TimerState u_timerState;
+    bool u_started, u_paused;
 };
 
 #endif

@@ -8,43 +8,46 @@
 
 #include "u_timer.h"
 
-void u_timer::Pause(lua_State*)
+u_timer::u_timer() : u_started(false), u_paused(false), ticks(0), last(0)
 {
-    last = SDL_GetTicks() - ticks;
-    
-    u_timerState = PAUSED;
+    // constructor
 }
 
-void u_timer::Start(lua_State*)
+void u_timer::Pause()
 {
-    if(u_timerState == PAUSED) 
+    if(u_started && !u_paused) {
+        last = SDL_GetTicks() - ticks;
+        u_paused = true;
+    }
+}
+
+void u_timer::Start()
+{
+    if(u_paused) 
     {
         ticks = SDL_GetTicks() - last;
-        
         last = 0;
-        
-        u_timerState = RUNNING;
+        u_paused = false;
+        u_started = true;
     }
     
     ticks = SDL_GetTicks();
+    u_started = true;
 }
 
 // get timer ticks in mseconds
 
-int u_timer::getTicks(lua_State*)
+int u_timer::getTicks()
 {
-    return ticks;
+    return this->ticks;
 }
 
-void u_timer::Reset(lua_State*)
+bool u_timer::isPaused()
 {
-    ticks = 0;
-    last = 0;
-    
-    u_timerState = RESET;
+    return &this->u_paused;
 }
 
-void u_timer::Stop(lua_State*)
+bool u_timer::isStarted()
 {
-    u_timerState = STOPPED;
+    return &this->u_started;
 }
