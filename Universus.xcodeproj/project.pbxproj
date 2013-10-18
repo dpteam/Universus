@@ -10,6 +10,8 @@
 		EE08ED8D18100413006605FE /* u_timer.h in Headers */ = {isa = PBXBuildFile; fileRef = EE08ED8C18100413006605FE /* u_timer.h */; };
 		EE08ED8F181009AF006605FE /* u_timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE08ED8E181009AF006605FE /* u_timer.cpp */; };
 		EE93607C181087F200B9EFCE /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE93607B181087F200B9EFCE /* SDL2.framework */; };
+		EE9DDC2E18110E7300A5CB4F /* u_thread.h in Headers */ = {isa = PBXBuildFile; fileRef = EE9DDC2D18110E7300A5CB4F /* u_thread.h */; };
+		EE9DDC3018110F2900A5CB4F /* u_thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE9DDC2F18110F2900A5CB4F /* u_thread.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +19,8 @@
 		EE08ED8C18100413006605FE /* u_timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u_timer.h; sourceTree = "<group>"; };
 		EE08ED8E181009AF006605FE /* u_timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = u_timer.cpp; sourceTree = "<group>"; };
 		EE93607B181087F200B9EFCE /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = Library/Frameworks/SDL2.framework; sourceTree = SDKROOT; };
+		EE9DDC2D18110E7300A5CB4F /* u_thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u_thread.h; sourceTree = "<group>"; };
+		EE9DDC2F18110F2900A5CB4F /* u_thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = u_thread.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,8 @@
 			isa = PBXGroup;
 			children = (
 				EE93607B181087F200B9EFCE /* SDL2.framework */,
+				EE9DDC2D18110E7300A5CB4F /* u_thread.h */,
+				EE9DDC2F18110F2900A5CB4F /* u_thread.cpp */,
 				EE08ED8C18100413006605FE /* u_timer.h */,
 				EE08ED8E181009AF006605FE /* u_timer.cpp */,
 				EE08ED80181001EA006605FE /* Products */,
@@ -57,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE08ED8D18100413006605FE /* u_timer.h in Headers */,
+				EE9DDC2E18110E7300A5CB4F /* u_thread.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +118,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE08ED8F181009AF006605FE /* u_timer.cpp in Sources */,
+				EE9DDC3018110F2900A5CB4F /* u_thread.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
