@@ -8,14 +8,14 @@
 
 #include "u_timer.h"
 
-void u_timer::Pause(lua_State *L)
+void u_timer::Pause(lua_State*)
 {
     last = SDL_GetTicks() - ticks;
     
     u_timerState = PAUSED;
 }
 
-void u_timer::Start(lua_State *L)
+void u_timer::Start(lua_State*)
 {
     if(u_timerState == PAUSED) 
     {
@@ -31,12 +31,12 @@ void u_timer::Start(lua_State *L)
 
 // get timer ticks in mseconds
 
-int u_timer::getTicks(lua_State *L)
+int u_timer::getTicks(lua_State*)
 {
     return ticks;
 }
 
-void u_timer::Reset(lua_State *L)
+void u_timer::Reset(lua_State*)
 {
     ticks = 0;
     last = 0;
@@ -44,7 +44,7 @@ void u_timer::Reset(lua_State *L)
     u_timerState = RESET;
 }
 
-void u_timer::Stop(lua_State *L)
+void u_timer::Stop(lua_State*)
 {
     u_timerState = STOPPED;
 }
