@@ -10,6 +10,7 @@
 #define _U_TIMER_H_
 
 #include <SDL2/SDL.h>
+#include "u_script.h"
 
 
 // timer?
@@ -28,19 +29,19 @@ public:
     u_timer() : u_timerState(RUNNING), ticks(0), last(0) {}
     
     // starts the timer
-    void Start(void);
+    void Start(lua_State*);
     
     // pause the timer
-    void Pause(void);
+    void Pause(lua_State*);
     
     // resets timer
-    void Reset(void);
+    void Reset(lua_State*);
     
     // stop timer
-    void Stop(void);
+    void Stop(lua_State*);
     
     // get timer ticks in mseconds
-    int getTicks();
+    int getTicks(lua_State*);
     
 private:
     int ticks, last;

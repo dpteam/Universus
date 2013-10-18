@@ -41,3 +41,8 @@ int u_thread::Wait()
     
     return ret;
 }
+
+void u_thread::setThreadPriority(SDL_ThreadPriority *priority)
+{
+    SDL_SetThreadPriority(*priority);
+}

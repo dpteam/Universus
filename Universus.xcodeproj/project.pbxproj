@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		EE08ED8D18100413006605FE /* u_timer.h in Headers */ = {isa = PBXBuildFile; fileRef = EE08ED8C18100413006605FE /* u_timer.h */; };
 		EE08ED8F181009AF006605FE /* u_timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE08ED8E181009AF006605FE /* u_timer.cpp */; };
+		EE20816D18111B3500FE773A /* Lua.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE20816C18111B3500FE773A /* Lua.framework */; };
+		EE20817018111CE000FE773A /* u_script.h in Headers */ = {isa = PBXBuildFile; fileRef = EE20816F18111CE000FE773A /* u_script.h */; };
+		EE20817218111F3D00FE773A /* u_script.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE20817118111F3D00FE773A /* u_script.cpp */; };
+		EE90EE5B18113E03002D88CE /* u_luabinds.h in Headers */ = {isa = PBXBuildFile; fileRef = EE90EE5A18113E03002D88CE /* u_luabinds.h */; };
+		EE90EE5E18113F08002D88CE /* u_luabinds.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE90EE5D18113F08002D88CE /* u_luabinds.cpp */; };
 		EE93607C181087F200B9EFCE /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE93607B181087F200B9EFCE /* SDL2.framework */; };
 		EE9DDC2E18110E7300A5CB4F /* u_thread.h in Headers */ = {isa = PBXBuildFile; fileRef = EE9DDC2D18110E7300A5CB4F /* u_thread.h */; };
 		EE9DDC3018110F2900A5CB4F /* u_thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE9DDC2F18110F2900A5CB4F /* u_thread.cpp */; };
@@ -18,6 +23,11 @@
 		EE08ED7F181001EA006605FE /* libUniversus.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libUniversus.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE08ED8C18100413006605FE /* u_timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u_timer.h; sourceTree = "<group>"; };
 		EE08ED8E181009AF006605FE /* u_timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = u_timer.cpp; sourceTree = "<group>"; };
+		EE20816C18111B3500FE773A /* Lua.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lua.framework; path = Library/Frameworks/Lua.framework; sourceTree = SDKROOT; };
+		EE20816F18111CE000FE773A /* u_script.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u_script.h; sourceTree = "<group>"; };
+		EE20817118111F3D00FE773A /* u_script.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = u_script.cpp; sourceTree = "<group>"; };
+		EE90EE5A18113E03002D88CE /* u_luabinds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u_luabinds.h; sourceTree = "<group>"; };
+		EE90EE5D18113F08002D88CE /* u_luabinds.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = u_luabinds.cpp; sourceTree = "<group>"; };
 		EE93607B181087F200B9EFCE /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = Library/Frameworks/SDL2.framework; sourceTree = SDKROOT; };
 		EE9DDC2D18110E7300A5CB4F /* u_thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u_thread.h; sourceTree = "<group>"; };
 		EE9DDC2F18110F2900A5CB4F /* u_thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = u_thread.cpp; sourceTree = "<group>"; };
@@ -28,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE20816D18111B3500FE773A /* Lua.framework in Frameworks */,
 				EE93607C181087F200B9EFCE /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,7 +49,12 @@
 		EE08ED74181001E9006605FE = {
 			isa = PBXGroup;
 			children = (
+				EE20816C18111B3500FE773A /* Lua.framework */,
 				EE93607B181087F200B9EFCE /* SDL2.framework */,
+				EE90EE5A18113E03002D88CE /* u_luabinds.h */,
+				EE90EE5D18113F08002D88CE /* u_luabinds.cpp */,
+				EE20816F18111CE000FE773A /* u_script.h */,
+				EE20817118111F3D00FE773A /* u_script.cpp */,
 				EE9DDC2D18110E7300A5CB4F /* u_thread.h */,
 				EE9DDC2F18110F2900A5CB4F /* u_thread.cpp */,
 				EE08ED8C18100413006605FE /* u_timer.h */,
@@ -64,6 +80,8 @@
 			files = (
 				EE08ED8D18100413006605FE /* u_timer.h in Headers */,
 				EE9DDC2E18110E7300A5CB4F /* u_thread.h in Headers */,
+				EE20817018111CE000FE773A /* u_script.h in Headers */,
+				EE90EE5B18113E03002D88CE /* u_luabinds.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +137,8 @@
 			files = (
 				EE08ED8F181009AF006605FE /* u_timer.cpp in Sources */,
 				EE9DDC3018110F2900A5CB4F /* u_thread.cpp in Sources */,
+				EE20817218111F3D00FE773A /* u_script.cpp in Sources */,
+				EE90EE5E18113F08002D88CE /* u_luabinds.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
