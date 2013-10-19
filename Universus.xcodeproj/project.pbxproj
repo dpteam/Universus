@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		EE08ED8D18100413006605FE /* u_timer.h in Headers */ = {isa = PBXBuildFile; fileRef = EE08ED8C18100413006605FE /* u_timer.h */; };
 		EE08ED8F181009AF006605FE /* u_timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE08ED8E181009AF006605FE /* u_timer.cpp */; };
-		EE20816D18111B3500FE773A /* Lua.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE20816C18111B3500FE773A /* Lua.framework */; };
 		EE93607C181087F200B9EFCE /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE93607B181087F200B9EFCE /* SDL2.framework */; };
+		EE93CADA1813359D000CC676 /* u_window.h in Headers */ = {isa = PBXBuildFile; fileRef = EE93CAD91813359D000CC676 /* u_window.h */; };
+		EE93CADC181335F1000CC676 /* u_window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE93CADB181335F1000CC676 /* u_window.cpp */; };
 		EE9DDC2E18110E7300A5CB4F /* u_thread.h in Headers */ = {isa = PBXBuildFile; fileRef = EE9DDC2D18110E7300A5CB4F /* u_thread.h */; };
 		EE9DDC3018110F2900A5CB4F /* u_thread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE9DDC2F18110F2900A5CB4F /* u_thread.cpp */; };
 /* End PBXBuildFile section */
@@ -19,8 +20,9 @@
 		EE08ED7F181001EA006605FE /* libUniversus.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libUniversus.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE08ED8C18100413006605FE /* u_timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u_timer.h; sourceTree = "<group>"; };
 		EE08ED8E181009AF006605FE /* u_timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = u_timer.cpp; sourceTree = "<group>"; };
-		EE20816C18111B3500FE773A /* Lua.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lua.framework; path = Library/Frameworks/Lua.framework; sourceTree = SDKROOT; };
 		EE93607B181087F200B9EFCE /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = Library/Frameworks/SDL2.framework; sourceTree = SDKROOT; };
+		EE93CAD91813359D000CC676 /* u_window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u_window.h; sourceTree = "<group>"; };
+		EE93CADB181335F1000CC676 /* u_window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = u_window.cpp; sourceTree = "<group>"; };
 		EE9DDC2D18110E7300A5CB4F /* u_thread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u_thread.h; sourceTree = "<group>"; };
 		EE9DDC2F18110F2900A5CB4F /* u_thread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = u_thread.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -30,7 +32,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE20816D18111B3500FE773A /* Lua.framework in Frameworks */,
 				EE93607C181087F200B9EFCE /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,8 +42,9 @@
 		EE08ED74181001E9006605FE = {
 			isa = PBXGroup;
 			children = (
-				EE20816C18111B3500FE773A /* Lua.framework */,
 				EE93607B181087F200B9EFCE /* SDL2.framework */,
+				EE93CAD91813359D000CC676 /* u_window.h */,
+				EE93CADB181335F1000CC676 /* u_window.cpp */,
 				EE9DDC2D18110E7300A5CB4F /* u_thread.h */,
 				EE9DDC2F18110F2900A5CB4F /* u_thread.cpp */,
 				EE08ED8C18100413006605FE /* u_timer.h */,
@@ -68,6 +70,7 @@
 			files = (
 				EE08ED8D18100413006605FE /* u_timer.h in Headers */,
 				EE9DDC2E18110E7300A5CB4F /* u_thread.h in Headers */,
+				EE93CADA1813359D000CC676 /* u_window.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +126,7 @@
 			files = (
 				EE08ED8F181009AF006605FE /* u_timer.cpp in Sources */,
 				EE9DDC3018110F2900A5CB4F /* u_thread.cpp in Sources */,
+				EE93CADC181335F1000CC676 /* u_window.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
