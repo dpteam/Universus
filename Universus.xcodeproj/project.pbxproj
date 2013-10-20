@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EE08ED8D18100413006605FE /* u_timer.h in Headers */ = {isa = PBXBuildFile; fileRef = EE08ED8C18100413006605FE /* u_timer.h */; };
 		EE08ED8F181009AF006605FE /* u_timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE08ED8E181009AF006605FE /* u_timer.cpp */; };
+		EE91FD071813DA8C002E5BA2 /* u_platform.h in Headers */ = {isa = PBXBuildFile; fileRef = EE91FD061813DA8C002E5BA2 /* u_platform.h */; };
 		EE93607C181087F200B9EFCE /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE93607B181087F200B9EFCE /* SDL2.framework */; };
 		EE93CADA1813359D000CC676 /* u_window.h in Headers */ = {isa = PBXBuildFile; fileRef = EE93CAD91813359D000CC676 /* u_window.h */; };
 		EE93CADC181335F1000CC676 /* u_window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE93CADB181335F1000CC676 /* u_window.cpp */; };
@@ -20,6 +21,7 @@
 		EE08ED7F181001EA006605FE /* libUniversus.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libUniversus.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE08ED8C18100413006605FE /* u_timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u_timer.h; sourceTree = "<group>"; };
 		EE08ED8E181009AF006605FE /* u_timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = u_timer.cpp; sourceTree = "<group>"; };
+		EE91FD061813DA8C002E5BA2 /* u_platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u_platform.h; sourceTree = "<group>"; };
 		EE93607B181087F200B9EFCE /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = Library/Frameworks/SDL2.framework; sourceTree = SDKROOT; };
 		EE93CAD91813359D000CC676 /* u_window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u_window.h; sourceTree = "<group>"; };
 		EE93CADB181335F1000CC676 /* u_window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = u_window.cpp; sourceTree = "<group>"; };
@@ -43,8 +45,9 @@
 			isa = PBXGroup;
 			children = (
 				EE93607B181087F200B9EFCE /* SDL2.framework */,
-				EE93CAD91813359D000CC676 /* u_window.h */,
+				EE91FD061813DA8C002E5BA2 /* u_platform.h */,
 				EE93CADB181335F1000CC676 /* u_window.cpp */,
+				EE93CAD91813359D000CC676 /* u_window.h */,
 				EE9DDC2D18110E7300A5CB4F /* u_thread.h */,
 				EE9DDC2F18110F2900A5CB4F /* u_thread.cpp */,
 				EE08ED8C18100413006605FE /* u_timer.h */,
@@ -71,6 +74,7 @@
 				EE08ED8D18100413006605FE /* u_timer.h in Headers */,
 				EE9DDC2E18110E7300A5CB4F /* u_thread.h in Headers */,
 				EE93CADA1813359D000CC676 /* u_window.h in Headers */,
+				EE91FD071813DA8C002E5BA2 /* u_platform.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

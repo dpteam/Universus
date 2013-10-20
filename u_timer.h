@@ -9,7 +9,22 @@
 #ifndef _U_TIMER_H_
 #define _U_TIMER_H_
 
+#include "u_platform.h"
+
+// SDL2 includes for OS X and Linux
+#if defined(PLATFORM_OSX) || defined(PLATFORM_LINUX)
+
 #include <SDL2/SDL.h>
+
+#endif
+
+// SDL2 includes for Windows
+#ifdef PLATFORM_WIN
+
+#include <SDL.h>
+
+#endif
+
 
 // timer?
 
