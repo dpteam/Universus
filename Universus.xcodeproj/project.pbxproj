@@ -7,22 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EE08ED8D18100413006605FE /* u_timer.h in Headers */ = {isa = PBXBuildFile; fileRef = EE08ED8C18100413006605FE /* u_timer.h */; };
-		EE08ED8F181009AF006605FE /* u_timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE08ED8E181009AF006605FE /* u_timer.cpp */; };
-		EE91FD071813DA8C002E5BA2 /* u_platform.h in Headers */ = {isa = PBXBuildFile; fileRef = EE91FD061813DA8C002E5BA2 /* u_platform.h */; };
-		EE93607C181087F200B9EFCE /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE93607B181087F200B9EFCE /* SDL2.framework */; };
-		EE93CADA1813359D000CC676 /* u_window.h in Headers */ = {isa = PBXBuildFile; fileRef = EE93CAD91813359D000CC676 /* u_window.h */; };
-		EE93CADC181335F1000CC676 /* u_window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EE93CADB181335F1000CC676 /* u_window.cpp */; };
+		E79489F318A270EB0000F1C2 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E79489F218A270EB0000F1C2 /* SDL2.framework */; };
+		E79489F618A2710D0000F1C2 /* u_sdl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E79489F418A2710D0000F1C2 /* u_sdl.cpp */; };
+		E79489F718A2710D0000F1C2 /* u_sdl.h in Headers */ = {isa = PBXBuildFile; fileRef = E79489F518A2710D0000F1C2 /* u_sdl.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E79489F218A270EB0000F1C2 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		E79489F418A2710D0000F1C2 /* u_sdl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = u_sdl.cpp; sourceTree = "<group>"; };
+		E79489F518A2710D0000F1C2 /* u_sdl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u_sdl.h; sourceTree = "<group>"; };
 		EE08ED7F181001EA006605FE /* libUniversus.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libUniversus.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE08ED8C18100413006605FE /* u_timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u_timer.h; sourceTree = "<group>"; };
-		EE08ED8E181009AF006605FE /* u_timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = u_timer.cpp; sourceTree = "<group>"; };
-		EE91FD061813DA8C002E5BA2 /* u_platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u_platform.h; sourceTree = "<group>"; };
-		EE93607B181087F200B9EFCE /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = Library/Frameworks/SDL2.framework; sourceTree = SDKROOT; };
-		EE93CAD91813359D000CC676 /* u_window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = u_window.h; sourceTree = "<group>"; };
-		EE93CADB181335F1000CC676 /* u_window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = u_window.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,7 +24,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE93607C181087F200B9EFCE /* SDL2.framework in Frameworks */,
+				E79489F318A270EB0000F1C2 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,12 +34,9 @@
 		EE08ED74181001E9006605FE = {
 			isa = PBXGroup;
 			children = (
-				EE93607B181087F200B9EFCE /* SDL2.framework */,
-				EE91FD061813DA8C002E5BA2 /* u_platform.h */,
-				EE93CADB181335F1000CC676 /* u_window.cpp */,
-				EE93CAD91813359D000CC676 /* u_window.h */,
-				EE08ED8C18100413006605FE /* u_timer.h */,
-				EE08ED8E181009AF006605FE /* u_timer.cpp */,
+				E79489F418A2710D0000F1C2 /* u_sdl.cpp */,
+				E79489F518A2710D0000F1C2 /* u_sdl.h */,
+				E79489F218A270EB0000F1C2 /* SDL2.framework */,
 				EE08ED80181001EA006605FE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,9 +56,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE08ED8D18100413006605FE /* u_timer.h in Headers */,
-				EE93CADA1813359D000CC676 /* u_window.h in Headers */,
-				EE91FD071813DA8C002E5BA2 /* u_platform.h in Headers */,
+				E79489F718A2710D0000F1C2 /* u_sdl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +110,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE08ED8F181009AF006605FE /* u_timer.cpp in Sources */,
-				EE93CADC181335F1000CC676 /* u_window.cpp in Sources */,
+				E79489F618A2710D0000F1C2 /* u_sdl.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +168,10 @@
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				GCC_ENABLE_SSE3_EXTENSIONS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -193,6 +185,10 @@
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				GCC_ENABLE_SSE3_EXTENSIONS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
